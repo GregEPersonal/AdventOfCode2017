@@ -63,9 +63,12 @@ class Day18() {
     var args = strng.split(" ")
     val temp = args(2)
     var num = 0
-    try {num = temp.toInt}
-    catch {
-      num = registers.getOrElse(temp,0)
+
+    try {
+      num = temp.toInt
+    } catch {
+      case _: NumberFormatException =>
+        num = registers.getOrElse(temp, 0)
     }
     val reg = args(1)
 

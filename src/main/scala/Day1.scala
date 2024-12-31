@@ -9,6 +9,7 @@ class Day1Prob1() {
 
   def run() : Unit = {
 
+    println("Day 1 Problem 1")
     val filename = "src/main/resources/PromptD1P1.txt"
     for (line <- Source.fromFile(filename).getLines) {
       val text = line
